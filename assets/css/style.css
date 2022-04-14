@@ -1,0 +1,59 @@
+body{
+    background-color: #06202a;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+.movielist{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie{
+    width: 90%;
+}
+
+.movieimagefig{
+    width: 100%;
+    margin: auto;
+}
+
+.movieposter{
+    width: 100%;
+}
+
+.movietext{
+    width: 100%;
+    overflow: hidden;
+}
+
+.moviesynopsis{
+    width: 800%;
+}
+
+.movietitle{
+
+}
+
+.moviescore{
+    margin-top: 0px;
+}
+.moviethumbup{
+    height: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    .movielist{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .movie{
+        width: 40%;
+    }
+
+    .moviesynopsis{
+        width: 100%;
+    }
+
+}
