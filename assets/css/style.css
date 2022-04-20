@@ -5,12 +5,14 @@ body{
 }
 
 .movielist{
+    margin: 10px;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .movie{
-    width: 90%;
+    width: 95%;
 }
 
 .movieimagefig{
@@ -31,9 +33,6 @@ body{
     width: 800%;
 }
 
-.movietitle{
-
-}
 
 .moviescore{
     margin-top: 0px;
@@ -45,15 +44,27 @@ body{
 @media screen and (min-width: 768px) {
     .movielist{
         display: flex;
-        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
     }
 
     .movie{
-        width: 40%;
+        width: 45%;
+        margin-right: 15px;
     }
 
     .moviesynopsis{
         width: 100%;
+        height: 20px;
+        overflow: hidden;
     }
 
+}
+
+@media screen and (min-width: 1024px) {
+    .movie{
+        width: 30%;
+    }
 }
