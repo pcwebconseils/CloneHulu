@@ -4,6 +4,7 @@ body{
     font-family: sans-serif;
 }
 
+/*Utilisation du flex pour mettre en colone la liste des films*/
 .movielist{
     margin: 10px;
     width: 100%;
@@ -24,11 +25,13 @@ body{
     width: 100%;
 }
 
+/*Utilisation du overflow pour cacher le texte*/
 .movietext{
     width: 100%;
     overflow: hidden;
 }
 
+/*Combiner avec le w100% du .movietext pour cacher le texte*/
 .moviesynopsis{
     width: 800%;
 }
@@ -41,7 +44,9 @@ body{
     height: 15px;
 }
 
+/*Première media querrie pour la taille tablette (768px)*/
 @media screen and (min-width: 768px) {
+    /*Utilisation du flex pour mettre en ligne avec un alignement centré au début de la page*/
     .movielist{
         display: flex;
         flex-direction: row;
@@ -63,6 +68,7 @@ body{
 
 }
 
+/*Deuxiéme media querrie pour la taille écran*/
 @media screen and (min-width: 1024px) {
     .movie{
         width: 30%;
