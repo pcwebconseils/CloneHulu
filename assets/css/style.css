@@ -1,7 +1,6 @@
-
 body{
     background-color: #06202a;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 header{
     font-family: system-ui;
@@ -11,18 +10,22 @@ header{
     flex-direction: column;
     align-items: center;
 }
+/* div contenant les div (icones + paragraphe) */
 .top{
     width: 50%;
     margin-top: 15px;
     display: flex;
     align-items: center;
 }
+/* div contenant l'icone et le paragraphe */
 .icons{
     width: 32px;
     height: 32px;
     text-align: center;
     margin: auto;
+    cursor: pointer;
 }
+/* paragraphe non-visible */
 .icons p{
     opacity: 0;
     text-align: center;
@@ -30,14 +33,15 @@ header{
     position: relative;
     left: -35px;
 }
+/* paragraphe visible */
 .icons:hover p{
     opacity: 1;
 }
-/* animation de rebond sur les icones de la nav */
-.head_icon:hover{
+/* animation de rebond sur les icones de la nav en survolant la div .icons avec la souris*/
+.icons:hover > .head_icon{ 
+    /* utilisation d'un combinateurs (selecteur d'éléments enfants)*/
     animation: icone 1s infinite;
 }
-
 @keyframes icone{
     0%, 100%{
         transform: translateY(-25%);
@@ -47,8 +51,8 @@ header{
         transform: none;
         animation-timing-function: cubic-bezier(.0,0,2,1);
     }
-
 }
+/* div contenant le logo */
 #img__logo{
     margin: 10px;
     display: flex;
