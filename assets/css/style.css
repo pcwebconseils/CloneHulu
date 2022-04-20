@@ -1,0 +1,102 @@
+body{
+    background-color: #06202a;
+    color: white;
+    font-family: sans-serif;
+}
+
+/* Width de 100% pour limier le nombre de h2 qui vont s'afficher sur la largeur ecran mobile.
+Mise en place du hidden pour masquer tous les h2 qui "dépasseront" de l'écran */
+nav {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* 
+Width de 350% pour permettre aux 10 h2 (trop larges pour l'ecran) de rester sur une ligne.(en attente
+la création de "l'effet defilement", en JS?).Et mise en flex pour gérer l'espacement entre les items.
+ */
+
+#navdiv {
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+    width: 350%;
+}
+
+/* pour l'effet grossissement au survol souris. */
+.navh2:hover {
+    font-size: 1.6em;
+}
+
+/* choix taille police pour aspect visuel sur mobile */
+.navh2 {
+    font-size: 1.5em;
+}
+
+/* Création d'une div. Lui fixer une position absolue car elle ne s'applique
+qu'à cet endroit de la page. Puis le "linear gradient pour passer progressivement de la couleur de background
+jusqu'au noir total. Et ainsi obtenir "l'effet de flou". */
+.flou {
+    position: absolute;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(6,32,42,1) 75%);
+    width: 75px;
+    height: 100px;
+    top: 0;
+    right: 0;
+}
+/* adaptation largeur #navdiv à 250%, pour éviter: Soit trop peu de h2 affichés avec trop d'espace
+    entre chaque (pas beau du tout). Soit éviter un h2 "coupé par le bord de l'écran. */
+    @media all and (min-width:1024px) {
+       
+        #navdiv {
+            width: 250%;
+        }
+    
+        .navh2:hover {
+            font-size: 1.8em;
+        }
+    
+        .navh2 {
+            font-size: 1.5em;
+        }
+    }
+
+/* adaptation width #navdiv à 200% et le hidden, car je dois de nouveau cacher les éléments sortant de l'ecran.*/
+@media all and (min-width:1440px) {
+    
+
+    #navdiv {
+        width: 200%;
+    }
+
+    .navh2:hover {
+        font-size: 2.2em;
+    }
+
+    .navh2 {
+        font-size: 2em;
+    }
+}
+
+/* adaptation aux écrans plus grands.
+Remise à 100% de la #navdiv pour réafficher tous les h2 à l'écran.
+Height #navdiv à définir avant version définitive!!!! */
+
+@media all and (min-width:2560px) {
+    #navdiv {
+        width: 100%;
+    }
+
+    .navh2:hover {
+        font-size: 2.6em;
+    }  
+
+    .navh2 {
+        font-size: 2.4em;
+    }
+}
+
+
+
+
