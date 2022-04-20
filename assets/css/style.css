@@ -1,26 +1,22 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+
 body{
-    background-color: rgba(6,32,42);
+    background-color: #06202a;
     color: white;
 }
 header{
+    font-family: system-ui;
+    line-height: inherit;
     margin: 5px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    background-color: aqua;
-
+    align-items: center;
 }
 .top{
+    width: 50%;
+    margin-top: 15px;
     display: flex;
     align-items: center;
-    background-color: brown;
-    justify-content: space-between;
 }
-
 .icons{
     width: 32px;
     height: 32px;
@@ -36,18 +32,44 @@ header{
 }
 .icons:hover p{
     opacity: 1;
-
+}
+/* animation de rebond sur les icones de la nav */
+.head_icon:hover{
+    animation: icone 1s infinite;
 }
 
+@keyframes icone{
+    0%, 100%{
+        transform: translateY(-25%);
+        animation-timing-function: cubic-bezier(.8,0,1,1);
+    }
+    50%{
+        transform: none;
+        animation-timing-function: cubic-bezier(.0,0,2,1);
+    }
+
+}
 #img__logo{
+    margin: 10px;
     display: flex;
     justify-content: center;
 }
 #logo{
     display: flex;
-    width: 200px;
+    width: 180px;
     height: 100px;
 }
+/* passage du logo du dessous de la nav à la droite de la nav  */
 @media (min-width: 640px){
-
+    header{
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .top{
+        width: 700px;
+        margin-top: 0px;
+    }
+    #img__logo{
+        display: flex;
+    }
 }
