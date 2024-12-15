@@ -1,0 +1,76 @@
+body{
+    background-color: #06202a;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+
+/*Utilisation du flex pour mettre en colone la liste des films*/
+.movielist{
+    margin: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie{
+    width: 95%;
+}
+
+.movieimagefig{
+    width: 100%;
+    margin: auto;
+}
+
+.movieposter{
+    width: 100%;
+}
+
+/*Utilisation du overflow pour cacher le texte*/
+.movietext{
+    width: 100%;
+    overflow: hidden;
+}
+
+/*Combiner avec le w100% du .movietext pour cacher le texte*/
+.moviesynopsis{
+    width: 800%;
+}
+
+
+.moviescore{
+    margin-top: 0px;
+}
+.moviethumbup{
+    height: 15px;
+}
+
+/*Première media querrie pour la taille tablette (768px)*/
+@media screen and (min-width: 768px) {
+    /*Utilisation du flex pour mettre en ligne avec un alignement centré au début de la page*/
+    .movielist{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .movie{
+        width: 45%;
+        margin-right: 15px;
+    }
+
+    .moviesynopsis{
+        width: 100%;
+        height: 20px;
+        overflow: hidden;
+    }
+
+}
+
+/*Deuxiéme media querrie pour la taille écran*/
+@media screen and (min-width: 1024px) {
+    .movie{
+        width: 30%;
+    }
+}
